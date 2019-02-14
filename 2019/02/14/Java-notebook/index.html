@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/blog/img/favicon.ico">
+
+    <title>
+        
+        Java notebook - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/blog/css/aircloud.css">
+    <link rel="stylesheet" href="/blog/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/blog/img/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>Chris Shi</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/blog/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-Part"><span class="toc-text">Basic Part</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Byte-Short-Int-and-Long"><span class="toc-text">Byte, Short, Int and Long</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Float-and-Double"><span class="toc-text">Float and Double</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Char-and-Boolean"><span class="toc-text">Char and Boolean</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#String"><span class="toc-text">String</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Operator"><span class="toc-text">Operator</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Semicolon"><span class="toc-text">Semicolon  ;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#If-then-else"><span class="toc-text">If then else</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Method"><span class="toc-text">Method</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Method-Overloading"><span class="toc-text">Method Overloading</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Switch-Statement"><span class="toc-text">Switch Statement</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#For-Loop-Statement"><span class="toc-text">For Loop Statement</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Parsing-Values-form-a-String"><span class="toc-text">Parsing Values form a String</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Reading-User-Input"><span class="toc-text">Reading User Input</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#OOP-Part"><span class="toc-text">OOP Part</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Class"><span class="toc-text">Class</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Inheritance"><span class="toc-text">Inheritance</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Static-vs-Instance-method"><span class="toc-text">Static vs Instance method</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Static-vs-Instance-variables"><span class="toc-text">Static vs Instance variables</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Compostion"><span class="toc-text">Compostion</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Encapsulation"><span class="toc-text">Encapsulation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Polymorphism"><span class="toc-text">Polymorphism</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Array"><span class="toc-text">Array</span></a></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        Java notebook
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2019-02-14 11:47:24</span></span>
+        
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/blog/tags/#Java" title="Java">Java</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <h3 id="Basic-Part"><a href="#Basic-Part" class="headerlink" title="Basic Part"></a>Basic Part</h3><h4 id="Byte-Short-Int-and-Long"><a href="#Byte-Short-Int-and-Long" class="headerlink" title="Byte, Short, Int and Long"></a>Byte, Short, Int and Long</h4><ol>
+<li><p>Width</p>
+<p>Byte: 8 bits</p>
+<p>Short: 16 bits</p>
+<p>Int: 32 bits</p>
+<p>Long: 64 bits</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">long</span> myLongValue = <span class="number">1000L</span>; <span class="comment">//recommend to write "L"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Easy to read</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> myIntValue = <span class="number">3_123_456</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Variable type transfer</p>
+<p>Byte, Short -&gt; Int -&gt; Long</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">byte</span> myByteVal = <span class="number">4</span>;</span><br><span class="line"><span class="comment">// Wrong</span></span><br><span class="line"><span class="keyword">short</span> MyShortVal = <span class="number">20</span> / myByteVal;</span><br><span class="line"><span class="comment">// the result will transfer to int automatically </span></span><br><span class="line"><span class="comment">// Correct</span></span><br><span class="line"><span class="keyword">short</span> MyShortVal = (<span class="keyword">short</span>) (<span class="number">20</span> / myByteVal);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<h4 id="Float-and-Double"><a href="#Float-and-Double" class="headerlink" title="Float and Double"></a>Float and Double</h4><ol>
+<li><p>Width</p>
+<p>Float: 32 bits</p>
+<p>Double: 64 bits</p>
+</li>
+<li><p>Easy to read</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> pi = <span class="number">3.141_592_6</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Recommend to use double instead of float</p>
+</li>
+</ol>
+<hr>
+<h4 id="Char-and-Boolean"><a href="#Char-and-Boolean" class="headerlink" title="Char and Boolean"></a>Char and Boolean</h4><ol>
+<li><p>Char</p>
+<p>A Char variable can be a letter or a digit or a speical character or <a href="https://unicode-table.com/en/" target="_blank" rel="noopener">unicode character</a>. </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// a unicode character</span></span><br><span class="line"><span class="keyword">char</span> myChar3 = <span class="string">'\u00A9'</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Boolean</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">boolean</span> isMale = <span class="keyword">false</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Eight primitive type of Java</p>
+<p>byte, short, int, long, float, double, char, boolean</p>
+</li>
+</ol>
+<hr>
+<h4 id="String"><a href="#String" class="headerlink" title="String"></a>String</h4><ol>
+<li><p>String can contain a sequence of characters. </p>
+</li>
+<li><p>Use plus to append another string</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String myStr = <span class="string">"This is a string"</span>;</span><br><span class="line">myStr = myStr + <span class="string">", and this is more."</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>String + Int</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String lastString = <span class="string">"10"</span>;</span><br><span class="line"><span class="keyword">int</span> myInt = <span class="number">50</span>;</span><br><span class="line">lastString = lastString + myInt;</span><br><span class="line">System.out.println(lastString);</span><br><span class="line"><span class="comment">// ouput is "1050"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>String is an object (not primitive type).</p>
+</li>
+</ol>
+<hr>
+<h4 id="Operator"><a href="#Operator" class="headerlink" title="Operator"></a>Operator</h4><ol>
+<li><p>Example of “ = + - * / % “</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> result = <span class="number">2</span>;</span><br><span class="line">result += <span class="number">1</span>; <span class="comment">//same as "result++" or "result += 1"</span></span><br><span class="line"><span class="comment">// 3</span></span><br><span class="line">result = result - <span class="number">1</span>; <span class="comment">// same as "result--" or "result -= 1" </span></span><br><span class="line"><span class="comment">// 2</span></span><br><span class="line">result = result * <span class="number">10</span>; <span class="comment">// same as "result *= 10"</span></span><br><span class="line"><span class="comment">// 20</span></span><br><span class="line">result = result / <span class="number">5</span>; <span class="comment">// same as "result /= 5"</span></span><br><span class="line"><span class="comment">// 4</span></span><br><span class="line">result = result % <span class="number">3</span>; <span class="comment">//same as "result %= 3"</span></span><br><span class="line"><span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Example of “==” “ !=” “&gt;” “&lt;” “&amp;&amp;” “||”</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">boolean</span> isMale = <span class="keyword">false</span>;</span><br><span class="line"><span class="keyword">if</span> (isMale == <span class="keyword">true</span>)</span><br><span class="line">    System.out.println(<span class="string">"Male!"</span>);</span><br><span class="line"><span class="keyword">int</span> Score = <span class="number">82</span>;</span><br><span class="line"><span class="keyword">if</span> (Score != <span class="number">100</span>)</span><br><span class="line">    System.out.println(<span class="string">"Not 100!"</span>);</span><br><span class="line"><span class="keyword">if</span> (Score &gt; <span class="number">80</span>)</span><br><span class="line">    System.out.println(<span class="string">"Good score!"</span>);</span><br><span class="line"><span class="keyword">if</span> (Score &lt; <span class="number">80</span>)</span><br><span class="line">    System.out.println(<span class="string">"Bad score!"</span>);</span><br><span class="line"><span class="keyword">int</span> secondScore = <span class="number">90</span>;</span><br><span class="line"><span class="keyword">if</span> ((secondScore &gt; Score) &amp;&amp; (secondScore &lt; <span class="number">100</span>))</span><br><span class="line">    System.out.println(<span class="string">"Greater than firstscore and less than 100!"</span>);</span><br><span class="line"><span class="keyword">if</span> ((secondScore &gt; Score) || (secondScore &lt; <span class="number">100</span>))</span><br><span class="line">    System.out.println(<span class="string">"Greater than firstscore or less than 100!"</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Assignment expression will return value. Be carefule when writing conditon expression “==”.</p>
+<p>Example:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">boolean</span> isCar = <span class="keyword">false</span>;</span><br><span class="line"><span class="keyword">if</span> (isCar = <span class="keyword">true</span>)</span><br><span class="line">     System.out.println(<span class="string">"It's a car"</span>);</span><br><span class="line"><span class="comment">// This code will ouput "It's a car"!!!</span></span><br><span class="line"><span class="comment">// Because "isCar = true" will return true.</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>=?:</p>
+<p>Example:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">boolean</span> isCar = <span class="keyword">false</span>;</span><br><span class="line"><span class="keyword">boolean</span> wasCar = isCar? <span class="keyword">true</span> : <span class="keyword">false</span>;</span><br><span class="line"><span class="comment">// is false</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>More operators</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">!       Logical complement operator;</span><br><span class="line">        inverts the value of a boolean</span><br><span class="line">~       Unary bitwise complement</span><br><span class="line">&lt;&lt;      Signed left shift</span><br><span class="line">&gt;&gt;      Signed right shift</span><br><span class="line">&gt;&gt;&gt;     Unsigned right shift</span><br><span class="line">&amp;       Bitwise AND</span><br><span class="line">^       Bitwise exclusive OR</span><br><span class="line">|       Bitwise inclusive OR</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<h4 id="Semicolon"><a href="#Semicolon" class="headerlink" title="Semicolon  ;"></a>Semicolon  ;</h4><hr>
+<h4 id="If-then-else"><a href="#If-then-else" class="headerlink" title="If then else"></a>If then else</h4><p>Template:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>( condition1 )&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>( codition2 )&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Attention:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">boolean</span> gameover = <span class="keyword">true</span>;</span><br><span class="line"><span class="keyword">if</span> (gameover)&#123;</span><br><span class="line">    <span class="keyword">int</span> score = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Can't access the variables in the if code block. </span></span><br><span class="line"><span class="comment">// Those variables will be deleted automatically.</span></span><br><span class="line"><span class="comment">// wrong</span></span><br><span class="line"><span class="keyword">int</span> finalscore = score;</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h4><p>Example:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">methodAdd</span><span class="params">(<span class="keyword">int</span> val1, <span class="keyword">int</span> val2)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (val1+val2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="Method-Overloading"><a href="#Method-Overloading" class="headerlink" title="Method Overloading"></a>Method Overloading</h4><hr>
+<h4 id="Switch-Statement"><a href="#Switch-Statement" class="headerlink" title="Switch Statement"></a>Switch Statement</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(switchValue)&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">        ...</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">        ...</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>: <span class="keyword">case</span> <span class="number">4</span>: <span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line">        ...</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        ...</span><br><span class="line">        <span class="keyword">break</span>;       </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="For-Loop-Statement"><a href="#For-Loop-Statement" class="headerlink" title="For Loop Statement"></a>For Loop Statement</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(init;termination;increment)&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> Example</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Tip:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String.format(<span class="string">"%.2f"</span>,doubleVal);</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="Parsing-Values-form-a-String"><a href="#Parsing-Values-form-a-String" class="headerlink" title="Parsing Values form a String"></a>Parsing Values form a String</h4><p>Convert String to Int</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> number = Integer.parseInt(numberString);</span><br></pre></td></tr></table></figure>
+<p>Convert String to Double</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> number = Double.parseDouble(numberString);</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="Reading-User-Input"><a href="#Reading-User-Input" class="headerlink" title="Reading User Input"></a>Reading User Input</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">String name = scanner.nextline();</span><br><span class="line"><span class="keyword">int</span> age = scanner.nextInt();</span><br><span class="line">scanner.nextInt();<span class="comment">//for the "enter" after the input integer; </span></span><br><span class="line">scanner.close();</span><br></pre></td></tr></table></figure>
+<p>Check input as int</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"><span class="keyword">boolean</span> hasNextInt = scanner.hasNextInt();</span><br><span class="line"><span class="keyword">if</span>(hasNextInt)&#123;</span><br><span class="line">    <span class="keyword">int</span> age = scanner.nextInt();</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Tip: </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> max = Integer.MAX_VAULE;</span><br><span class="line"><span class="keyword">int</span> min = Integer.MIN_VAULE;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="OOP-Part"><a href="#OOP-Part" class="headerlink" title="OOP Part"></a>OOP Part</h3><h4 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h4><ol>
+<li>Features: state with fields and behaviors with methods</li>
+<li>public, private, protected</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Account</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String number;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> deposit;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Account</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>(<span class="string">"12345"</span>,<span class="number">2.50</span>);<span class="comment">//has to be the first line</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Account</span><span class="params">(String number)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>(number, <span class="number">2.50</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Account</span><span class="params">(String number, <span class="keyword">double</span> deposit)</span></span>&#123;</span><br><span class="line">        self.number = number;</span><br><span class="line">        self.deposit = deposit;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getDeposit</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> deposit;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="Inheritance"><a href="#Inheritance" class="headerlink" title="Inheritance"></a>Inheritance</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Animal.java</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> size;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Animal</span><span class="params">(String name, <span class="keyword">int</span> size)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.size = size;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Dog.java</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> eyes;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Dog</span><span class="params">(String name, <span class="keyword">int</span> size, <span class="keyword">int</span> eyes)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.eyes = eyes;</span><br><span class="line">        <span class="keyword">super</span>(name, size);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> coid <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">        ...</span><br><span class="line">        <span class="comment">// if use the eat method in father class</span></span><br><span class="line">        <span class="keyword">super</span>.eat();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="Static-vs-Instance-method"><a href="#Static-vs-Instance-method" class="headerlink" title="Static vs Instance method"></a>Static vs Instance method</h4><p>Static Methods:</p>
+<ul>
+<li>declared by using a static modifier</li>
+<li>can’t access instance methods and instance variables directly.</li>
+<li>usually used for operations that don’t require any data from an instance of class(from ‘this’)</li>
+<li>Can’t use this keyword</li>
+<li>“Main” is a static method</li>
+</ul>
+<p>Instance methods</p>
+<ul>
+<li>belong to an instance of class</li>
+<li>to use an instance methos we have to instantiate the class first usually by using the new keyword.</li>
+<li>can access instance/static methods and instance/static variables.</li>
+</ul>
+<h4 id="Static-vs-Instance-variables"><a href="#Static-vs-Instance-variables" class="headerlink" title="Static vs Instance variables"></a>Static vs Instance variables</h4><p>Static variables:</p>
+<ul>
+<li>decalred by using keyword static </li>
+<li>static variables are also known as static member variables</li>
+<li>every instance of that class shares the same variables</li>
+<li>if changes are made to that variable, all other instances will see the effect of the change.</li>
+<li>For example, when reading uesr input using Scanner we will declare scanner as a static variable.</li>
+<li>That way static methods can access it directly.</li>
+</ul>
+<p>Instance variables:</p>
+<ul>
+<li>known as fields or member variables</li>
+</ul>
+<hr>
+<h4 id="Compostion"><a href="#Compostion" class="headerlink" title="Compostion"></a>Compostion</h4><hr>
+<h4 id="Encapsulation"><a href="#Encapsulation" class="headerlink" title="Encapsulation"></a>Encapsulation</h4><p>public, private</p>
+<hr>
+<h4 id="Polymorphism"><a href="#Polymorphism" class="headerlink" title="Polymorphism"></a>Polymorphism</h4><p>Tip: random int number</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// return 0~1 double number</span></span><br><span class="line">Math.random</span><br><span class="line"><span class="comment">// generate random number between 1 to 5.</span></span><br><span class="line"><span class="keyword">int</span> randomNum = (<span class="keyword">int</span>)(Math.random*<span class="number">5</span>)+<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] myIntArray = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line">myIntArray[<span class="number">5</span>] = <span class="number">50</span>;</span><br><span class="line"><span class="comment">// or</span></span><br><span class="line"><span class="keyword">int</span>[] myIntArray = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">0</span>&#125;;</span><br><span class="line"><span class="comment">// get length of array</span></span><br><span class="line">myIntArray.length;</span><br><span class="line"></span><br><span class="line"><span class="comment">//copy</span></span><br><span class="line"><span class="keyword">int</span>[] sortedArray = Array.copyof(myIntArray, myIntArray.length);</span><br></pre></td></tr></table></figure>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+        <li>
+            <a target="_blank" href="https://github.com/christopherxxshi">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank" href="https://www.linkedin.com/in/uschrisshi">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-linkedin"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/blog/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/blog/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>

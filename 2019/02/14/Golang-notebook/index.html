@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/blog/img/favicon.ico">
+
+    <title>
+        
+        Golang notebook - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/blog/css/aircloud.css">
+    <link rel="stylesheet" href="/blog/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/blog/img/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>Chris Shi</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/blog/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#变量定义"><span class="toc-text">变量定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内建变量类型"><span class="toc-text">内建变量类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常量与枚举"><span class="toc-text">常量与枚举</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#条件语句"><span class="toc-text">条件语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#循环"><span class="toc-text">循环</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        Golang notebook
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2019-02-14 11:48:27</span></span>
+        
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/blog/tags/#Golang" title="Golang">Golang</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <h2 id="变量定义"><a href="#变量定义" class="headerlink" title="变量定义"></a>变量定义</h2><ol>
+<li><p>var 变量名 变量类型 //可以默认为空</p>
+ <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a <span class="keyword">int</span> <span class="comment">// 0</span></span><br><span class="line"><span class="keyword">var</span> s <span class="keyword">string</span> <span class="comment">// ""</span></span><br><span class="line"><span class="keyword">var</span> b,c <span class="keyword">int</span> = <span class="number">3</span>,<span class="number">4</span></span><br><span class="line"><span class="comment">//集中定义</span></span><br><span class="line"><span class="keyword">var</span> (</span><br><span class="line">    b <span class="keyword">int</span> = <span class="number">3</span></span><br><span class="line">    c <span class="keyword">int</span> = <span class="string">"def"</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="2">
+<li>定义的变量必须使用</li>
+<li><p>可以自动推断类型</p>
+ <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a, b, c = <span class="number">3</span>, <span class="literal">true</span>, <span class="string">"def"</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="4">
+<li><p>第一次定义可以使用:= (不可以在函数外使用)</p>
+ <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a, b, c := <span class="number">3</span>, <span class="literal">true</span>, <span class="string">"def"</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="内建变量类型"><a href="#内建变量类型" class="headerlink" title="内建变量类型"></a>内建变量类型</h2><ol>
+<li>bool, string</li>
+<li>(u)int (长度根据系统字节), (u)int8, (u)int16,(u)int32, (u)int64, uintptr</li>
+<li>byte, rune(go中的char, 32位)</li>
+<li><p>float32, float64, complex64(复数，实部32位，虚部32位), complex128</p>
+ <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">c := <span class="number">3</span>+<span class="number">4i</span></span><br><span class="line">cmplx.Abs(c) <span class="comment">// 5</span></span><br><span class="line">cmplx.Pow(math.E, <span class="number">1i</span>*math.Pi)+<span class="number">1</span> <span class="comment">// 0, 虚部会带有一个极小值偏差</span></span><br><span class="line">cmplx.Exp(<span class="number">1i</span>*math.Pi)+<span class="number">1</span> <span class="comment">// 0</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>类型转换是强制的, 没有隐式转换</p>
+ <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a, b := <span class="number">3</span>, <span class="number">4</span></span><br><span class="line"><span class="keyword">var</span> c <span class="keyword">int</span></span><br><span class="line">c = <span class="keyword">int</span>(math.Sqrt(<span class="keyword">float64</span>(a*a+b*b)))</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="常量与枚举"><a href="#常量与枚举" class="headerlink" title="常量与枚举"></a>常量与枚举</h2><ol>
+<li><p>常量定义 const 常量名 （类型） = 值</p>
+ <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> filename = <span class="string">"test.txt"</span></span><br><span class="line"><span class="keyword">const</span>(</span><br><span class="line">    a = <span class="number">3</span></span><br><span class="line">    b = <span class="number">4</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="2">
+<li>常量不要随意大写</li>
+<li>常量数值可作为任意数值类型使用</li>
+<li><p>枚举</p>
+ <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span>(</span><br><span class="line">    cpp = <span class="literal">iota</span> <span class="comment">// 0</span></span><br><span class="line">    _</span><br><span class="line">    python <span class="comment">// 2</span></span><br><span class="line">    golang <span class="comment">// 3</span></span><br><span class="line">    javascript <span class="comment">//4 </span></span><br><span class="line">)</span><br><span class="line"><span class="comment">// b, kb, mb, gb, tb, pb</span></span><br><span class="line"><span class="keyword">const</span>(</span><br><span class="line">    b = <span class="number">1</span>&lt;&lt;(<span class="number">10</span>*<span class="literal">iota</span>) <span class="comment">//itoa可作为自增值得的种子</span></span><br><span class="line">    kb</span><br><span class="line">    mb</span><br><span class="line">    gb</span><br><span class="line">    tb</span><br><span class="line">    pb</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h2><ol>
+<li>if 条件不需要括号<br> <img src="https://lh3.googleusercontent.com/-j_DKZXUMz0w/XBWwfjeyv_I/AAAAAAAATmU/h3Vy4DTuRK8X0GyqRnjN2ZD8GHzm6a3yACHMYCw/I/Screen%252BShot%252B2018-12-15%252Bat%252B20.27.54.png" alt="Screen Shot 2018-12-15 at 20.27.54"></li>
+<li>if 条件里可以赋值， 赋值的变量作用域就在这个if语句里</li>
+<li><p>switch 可以自动break, switch 后边可以没有变量， 在case中写表达式</p>
+ <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">grade</span><span class="params">(score <span class="keyword">int</span>)</span> <span class="title">string</span></span> &#123;</span><br><span class="line">	g := <span class="string">""</span></span><br><span class="line">	<span class="keyword">switch</span> &#123;</span><br><span class="line">    	<span class="keyword">case</span> score &lt; <span class="number">0</span> || score &gt; <span class="number">100</span>:</span><br><span class="line">    		<span class="built_in">panic</span>(fmt.Sprintf(<span class="string">"Wrong score: %d"</span>, score)) <span class="comment">// 中断程序执行</span></span><br><span class="line">    	<span class="keyword">case</span> score &lt; <span class="number">60</span>:</span><br><span class="line">    		g = <span class="string">"F"</span></span><br><span class="line">    	<span class="keyword">case</span> score &lt; <span class="number">80</span>:</span><br><span class="line">    		g = <span class="string">"C"</span></span><br><span class="line">    	<span class="keyword">case</span> score &lt; <span class="number">90</span>:</span><br><span class="line">    		g = <span class="string">"B"</span></span><br><span class="line">    	<span class="keyword">case</span> score &lt;= <span class="number">100</span>:</span><br><span class="line">    		g = <span class="string">"A"</span></span><br><span class="line">    	<span class="keyword">return</span> g</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><ol>
+<li><p>for 的条件里不需要括号， 可以省略初始条件，结束条件， 递增表达式</p>
+ <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">sum := <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i := <span class="number">1</span>; i &lt;= <span class="number">100</span>; i++&#123;</span><br><span class="line">    sum += i</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">convertToBin</span><span class="params">(n <span class="keyword">int</span>)</span> <span class="title">string</span></span> &#123;</span><br><span class="line">    result := <span class="string">""</span></span><br><span class="line">    <span class="keyword">for</span> ; n &gt; <span class="number">0</span>; n /= <span class="number">2</span> &#123;</span><br><span class="line">        lsb := n % <span class="number">2</span></span><br><span class="line">        result = strconv.Itoa(lsb) + result</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<pre><code><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">printFile</span><span class="params">(filename <span class="keyword">string</span>)</span></span> &#123;</span><br><span class="line">    file, err := os.Open(filename)</span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">        <span class="built_in">panic</span>(err)</span><br><span class="line">    &#125;</span><br><span class="line">        printFileContents(file)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">printFileContents</span><span class="params">(reader io.Reader)</span></span> &#123;</span><br><span class="line">    scanner := bufio.NewScanner(reader)</span><br><span class="line">    <span class="keyword">for</span> scanner.Scan() &#123;</span><br><span class="line">	       fmt.Println(scanner.Text())</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+## 函数
+
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 函数名（变量1 类型， 变量2 类型）（返回值类型1， 返回值类型2）&#123;&#125;</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">eval</span><span class="params">(a, b <span class="keyword">int</span>, op <span class="keyword">string</span>)</span> <span class="params">(<span class="keyword">int</span>, error)</span></span> &#123;</span><br><span class="line">	<span class="keyword">switch</span> op &#123;</span><br><span class="line">	<span class="keyword">case</span> <span class="string">"+"</span>:</span><br><span class="line">		<span class="keyword">return</span> a + b, <span class="literal">nil</span></span><br><span class="line">	<span class="keyword">case</span> <span class="string">"-"</span>:</span><br><span class="line">		<span class="keyword">return</span> a - b, <span class="literal">nil</span></span><br><span class="line">	<span class="keyword">case</span> <span class="string">"*"</span>:</span><br><span class="line">		<span class="keyword">return</span> a * b, <span class="literal">nil</span></span><br><span class="line">	<span class="keyword">case</span> <span class="string">"/"</span>:</span><br><span class="line">		q, _ := div(a, b)</span><br><span class="line">		<span class="keyword">return</span> q, <span class="literal">nil</span></span><br><span class="line">	<span class="keyword">default</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>, fmt.Errorf(</span><br><span class="line">			<span class="string">"unsupported operation: %s"</span>, op)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">div</span><span class="params">(a, b <span class="keyword">int</span>)</span> <span class="params">(q, r <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">return</span> a / b, a % b</span><br><span class="line">    <span class="comment">// 或者 不建议</span></span><br><span class="line">    q = a / b</span><br><span class="line">    r = a % b</span><br><span class="line">    <span class="keyword">return</span> </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">sum</span><span class="params">(numbers ...<span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	s := <span class="number">0</span></span><br><span class="line">	<span class="keyword">for</span> i := <span class="keyword">range</span> numbers &#123;</span><br><span class="line">		s += numbers[i]</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> s</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+函数式编程
+
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">apply</span><span class="params">(op <span class="keyword">func</span>(<span class="keyword">int</span>, <span class="keyword">int</span>)</span> <span class="title">int</span>, <span class="title">a</span>, <span class="title">b</span> <span class="title">int</span>) <span class="title">int</span></span> &#123;</span><br><span class="line">	p := reflect.ValueOf(op).Pointer()</span><br><span class="line">	opName := runtime.FuncForPC(p).Name()</span><br><span class="line">	fmt.Printf(<span class="string">"Calling function %s with args "</span>+</span><br><span class="line">		<span class="string">"(%d, %d)\n"</span>, opName, a, b)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> op(a, b)    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+## 指针
+1. 指针不能运算
+2. 值传递？引用传递？ go语言只有值传递
+
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">swap</span><span class="params">(a, b *<span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">	*b, *a = *a, *b</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 另外这一种做法</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">swap</span><span class="params">(a, b <span class="keyword">int</span>)</span> <span class="params">(<span class="keyword">int</span>, <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> b, a</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</code></pre>
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+        <li>
+            <a target="_blank" href="https://github.com/christopherxxshi">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank" href="https://www.linkedin.com/in/uschrisshi">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-linkedin"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/blog/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/blog/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>
