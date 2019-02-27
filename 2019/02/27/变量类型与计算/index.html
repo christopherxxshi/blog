@@ -142,15 +142,15 @@
 <li>=== 与 ==</li>
 <li>内置函数</li>
 <li>存储方式分为哪些</li>
-<li>理解JSON<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><h3 id="值类型-vs-引用类型-按存储方式类型区分"><a href="#值类型-vs-引用类型-按存储方式类型区分" class="headerlink" title="值类型 vs 引用类型 (按存储方式类型区分)"></a>值类型 vs 引用类型 (按存储方式类型区分)</h3></li>
+<li>理解JSON</li>
 </ol>
-<ul>
+<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><h3 id="值类型-vs-引用类型-按存储方式类型区分"><a href="#值类型-vs-引用类型-按存储方式类型区分" class="headerlink" title="值类型 vs 引用类型 (按存储方式类型区分)"></a>值类型 vs 引用类型 (按存储方式类型区分)</h3><ul>
 <li>值类型： 只进行值传递</li>
 <li>引用类型： 指针传递</li>
 <li>object, function, array 都是引用类型</li>
-<li>引用类型可以无限扩展属性<h3 id="typeof-运算符"><a href="#typeof-运算符" class="headerlink" title="typeof 运算符"></a>typeof 运算符</h3></li>
+<li>引用类型可以无限扩展属性</li>
 </ul>
-<ol>
+<h3 id="typeof-运算符"><a href="#typeof-运算符" class="headerlink" title="typeof 运算符"></a>typeof 运算符</h3><ol>
 <li>typeof 只能区分出值类型的具体类型<ul>
 <li>typeof undefined //  undefined</li>
 <li>typeof ‘abc’ // string</li>
@@ -158,14 +158,16 @@
 <li>typeof true // boolean</li>
 </ul>
 </li>
-<li>typeof引用类型中能区分出来function<ul>
+<li><p>typeof引用类型中能区分出来function</p>
+<ul>
 <li>typeof {} // object</li>
 <li>typeof [] // object</li>
 <li>typeof null // object</li>
 <li>typeof console.log // function<h3 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h3></li>
 </ul>
 </li>
-<li>字符串拼接<ul>
+<li><p>字符串拼接</p>
+<ul>
 <li>100 + ’10’ // ‘10010’</li>
 </ul>
 </li>
@@ -182,17 +184,19 @@
 </li>
 <li>逻辑运算<ul>
 <li>10 &amp;&amp; 0 // 0</li>
-<li>“” || “abc” // “abc”<h3 id="vs"><a href="#vs" class="headerlink" title="=== vs =="></a>=== vs ==</h3></li>
+<li>“” || “abc” // “abc”</li>
 </ul>
 </li>
+</ol>
+<h3 id="vs"><a href="#vs" class="headerlink" title="=== vs =="></a>=== vs ==</h3><ol>
 <li>jQuery 中推荐的写法<ul>
 <li>obj.a == null</li>
 <li>相当于 obj.a == null || obj.a == undefined</li>
 </ul>
 </li>
-<li>其他地方全用 === <h3 id="JS-内置函数-数据封装类对象"><a href="#JS-内置函数-数据封装类对象" class="headerlink" title="JS 内置函数 - 数据封装类对象"></a>JS 内置函数 - 数据封装类对象</h3></li>
+<li>其他地方全用 === </li>
 </ol>
-<ul>
+<h3 id="JS-内置函数-数据封装类对象"><a href="#JS-内置函数-数据封装类对象" class="headerlink" title="JS 内置函数 - 数据封装类对象"></a>JS 内置函数 - 数据封装类对象</h3><ul>
 <li>Object</li>
 <li>Array</li>
 <li>Boolean</li>
@@ -201,8 +205,11 @@
 <li>Function</li>
 <li>Date</li>
 <li>RegExp</li>
-<li>Error<h3 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h3></li>
-<li>JSON 就是一个JS 的对象<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">JSON</span>.stringify(&#123;<span class="attr">a</span>:<span class="number">10</span>, <span class="attr">b</span>:<span class="number">10</span>&#125;)</span><br><span class="line"><span class="built_in">JSON</span>.parse(<span class="string">"&#123;'a':10, 'b':10&#125;"</span>&#125;</span><br></pre></td></tr></table></figure>
+<li>Error</li>
+</ul>
+<h3 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h3><ul>
+<li><p>JSON 就是一个JS 的对象</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">JSON</span>.stringify(&#123;<span class="attr">a</span>:<span class="number">10</span>, <span class="attr">b</span>:<span class="number">10</span>&#125;)</span><br><span class="line"><span class="built_in">JSON</span>.parse(<span class="string">"&#123;'a':10, 'b':10&#125;"</span>&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 
