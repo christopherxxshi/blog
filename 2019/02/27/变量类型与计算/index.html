@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/blog/img/favicon.ico">
+
+    <title>
+        
+        变量类型与计算 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/blog/css/aircloud.css">
+    <link rel="stylesheet" href="/blog/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/blog/img/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>Chris Shi</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/blog/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#变量类型与计算"><span class="toc-text">变量类型与计算</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目"><span class="toc-text">题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#知识点"><span class="toc-text">知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#值类型-vs-引用类型-按存储方式类型区分"><span class="toc-text">值类型 vs 引用类型 (按存储方式类型区分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#typeof-运算符"><span class="toc-text">typeof 运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#强制类型转换"><span class="toc-text">强制类型转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vs"><span class="toc-text">=== vs ==</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JS-内置函数-数据封装类对象"><span class="toc-text">JS 内置函数 - 数据封装类对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JSON"><span class="toc-text">JSON</span></a></li></ol></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        变量类型与计算
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2019-02-27 16:33:37</span></span>
+        
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/blog/tags/#Javascript" title="Javascript">Javascript</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <h1 id="变量类型与计算"><a href="#变量类型与计算" class="headerlink" title="变量类型与计算"></a>变量类型与计算</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><ol>
+<li>typeof 能够得到哪些类型</li>
+<li>=== 与 ==</li>
+<li>内置函数</li>
+<li>存储方式分为哪些</li>
+<li>理解JSON<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><h3 id="值类型-vs-引用类型-按存储方式类型区分"><a href="#值类型-vs-引用类型-按存储方式类型区分" class="headerlink" title="值类型 vs 引用类型 (按存储方式类型区分)"></a>值类型 vs 引用类型 (按存储方式类型区分)</h3></li>
+</ol>
+<ul>
+<li>值类型： 只进行值传递</li>
+<li>引用类型： 指针传递</li>
+<li>object, function, array 都是引用类型</li>
+<li>引用类型可以无限扩展属性<h3 id="typeof-运算符"><a href="#typeof-运算符" class="headerlink" title="typeof 运算符"></a>typeof 运算符</h3></li>
+</ul>
+<ol>
+<li>typeof 只能区分出值类型的具体类型<ul>
+<li>typeof undefined //  undefined</li>
+<li>typeof ‘abc’ // string</li>
+<li>typeof 123 // number</li>
+<li>typeof true // boolean</li>
+</ul>
+</li>
+<li>typeof引用类型中能区分出来function<ul>
+<li>typeof {} // object</li>
+<li>typeof [] // object</li>
+<li>typeof null // object</li>
+<li>typeof console.log // function<h3 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h3></li>
+</ul>
+</li>
+<li>字符串拼接<ul>
+<li>100 + ’10’ // ‘10010’</li>
+</ul>
+</li>
+<li>== 运算符<ul>
+<li>100 == ‘100’ // true 100 -> ‘100’</li>
+<li>0 == ‘’ // true 0-> false  ‘’ -> false</li>
+<li>null == undefined // true null -> false undefined -> false</li>
+</ul>
+</li>
+<li>if 语句<ul>
+<li>b = 100 </li>
+<li>if (b)  // true</li>
+</ul>
+</li>
+<li>逻辑运算<ul>
+<li>10 &amp;&amp; 0 // 0</li>
+<li>“” || “abc” // “abc”<h3 id="vs"><a href="#vs" class="headerlink" title="=== vs =="></a>=== vs ==</h3></li>
+</ul>
+</li>
+<li>jQuery 中推荐的写法<ul>
+<li>obj.a == null</li>
+<li>相当于 obj.a == null || obj.a == undefined</li>
+</ul>
+</li>
+<li>其他地方全用 === <h3 id="JS-内置函数-数据封装类对象"><a href="#JS-内置函数-数据封装类对象" class="headerlink" title="JS 内置函数 - 数据封装类对象"></a>JS 内置函数 - 数据封装类对象</h3></li>
+</ol>
+<ul>
+<li>Object</li>
+<li>Array</li>
+<li>Boolean</li>
+<li>Number</li>
+<li>String</li>
+<li>Function</li>
+<li>Date</li>
+<li>RegExp</li>
+<li>Error<h3 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h3></li>
+<li>JSON 就是一个JS 的对象<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">JSON</span>.stringify(&#123;<span class="attr">a</span>:<span class="number">10</span>, <span class="attr">b</span>:<span class="number">10</span>&#125;)</span><br><span class="line"><span class="built_in">JSON</span>.parse(<span class="string">"&#123;'a':10, 'b':10&#125;"</span>&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+        <li>
+            <a target="_blank" href="https://github.com/christopherxxshi">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank" href="https://www.linkedin.com/in/uschrisshi">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-linkedin"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/blog/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/blog/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://chrisshiblog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+
+
+</html>
