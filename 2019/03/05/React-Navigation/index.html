@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/blog/img/favicon.ico">
+
+    <title>
+        
+        React-Navigation - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/blog/css/aircloud.css">
+    <link rel="stylesheet" href="/blog/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/blog/img/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>Chris Shi</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/blog/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#类型"><span class="toc-text">类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#两个概念"><span class="toc-text">两个概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#导航器支持的props"><span class="toc-text">导航器支持的props</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Screen-Navigation-Prop-屏幕的navigation-Prop"><span class="toc-text">Screen Navigation Prop(屏幕的navigation Prop)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#navigation包含以下功能："><span class="toc-text">navigation包含以下功能：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#StackNavigator的navigation的额外功能"><span class="toc-text">StackNavigator的navigation的额外功能:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用navigate进行界面之间的跳转"><span class="toc-text">使用navigate进行界面之间的跳转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用state的params"><span class="toc-text">使用state的params</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用setParams-改变route-params"><span class="toc-text">使用setParams 改变route params</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用goBack返回到上一页面或指定页面"><span class="toc-text">使用goBack返回到上一页面或指定页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#通过dispatch发送一个action"><span class="toc-text">通过dispatch发送一个action</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NavigationActions"><span class="toc-text">NavigationActions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Navigate："><span class="toc-text">Navigate：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Back"><span class="toc-text">Back</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SetParams"><span class="toc-text">SetParams</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#StackActions"><span class="toc-text">StackActions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Reset："><span class="toc-text">Reset：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#replace"><span class="toc-text">replace</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#push"><span class="toc-text">push</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pop"><span class="toc-text">Pop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#popToTop"><span class="toc-text">popToTop</span></a></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        React-Navigation
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2019-03-05 17:37:19</span></span>
+        
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/blog/tags/#React Native" title="React Native">React Native</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><ul>
+<li>createStackNavigator: 类似于普通的Navigator，屏幕上方导航栏；</li>
+<li>createTabNavigator: createTabNavigator已弃用，使用createBottomTabNavigator和/或createMaterialTopTabNavigator替代；</li>
+<li>createBottomTabNavigator：相当于iOS里面的TabBarController，屏幕下方的标签栏；</li>
+<li>createMaterialTopTabNavigator：屏幕顶部的材料设计主题标签栏；</li>
+<li>createDrawerNavigator: 抽屉效果，侧边滑出；</li>
+<li>createSwitchNavigator：SwitchNavigator 的用途是一次只显示一个页面。</li>
+</ul>
+<h2 id="两个概念"><a href="#两个概念" class="headerlink" title="两个概念"></a>两个概念</h2><ul>
+<li>Screen navigation prop(屏幕导航属性)：通过navigation可以完成屏幕之间的调度操作，例如打开另一个屏幕；</li>
+<li>Screen navigationOptions(屏幕导航选项)： 通过navigationOptions可以定制导航器显示屏幕的方式（例如：头部标题，选项卡标签等）；</li>
+</ul>
+<h2 id="导航器支持的props"><a href="#导航器支持的props" class="headerlink" title="导航器支持的props"></a>导航器支持的props</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> SomeNav = StackNavigator/TabNavigator/DrawerNavigator(&#123;</span><br><span class="line">  <span class="comment">// config</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&lt;SomeNav</span><br><span class="line">  screenProps=&#123;xxx&#125;</span><br><span class="line">  ref=&#123;nav =&gt; &#123; navigation = nav; &#125;&#125;</span><br><span class="line">  onNavigationStateChange=<span class="function">(<span class="params">prevState, newState, action</span>)=&gt;</span>&#123;</span><br><span class="line">  	</span><br><span class="line">  &#125;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>ref：可以通过ref属性获取到navigation；</li>
+<li>onNavigationStateChange(prevState, newState, action)：顶级节点除了ref属性之外，还接受onNavigationStateChange(prevState, newState, action)属性，每次当导航器所管理的state发生改变时，都会回调该方法；<ul>
+<li>prevState：变化之前的state；</li>
+<li>newState：新的state；</li>
+<li>导致state变化的action；</li>
+</ul>
+</li>
+<li>screenProps：向子屏幕传递额外的数据，子屏幕可以通过this.props.screenProps获取到该数据。</li>
+</ul>
+<h2 id="Screen-Navigation-Prop-屏幕的navigation-Prop"><a href="#Screen-Navigation-Prop-屏幕的navigation-Prop" class="headerlink" title="Screen Navigation Prop(屏幕的navigation Prop)"></a>Screen Navigation Prop(屏幕的navigation Prop)</h2><p>当导航器中的屏幕被打开时，它会收到一个navigation prop，navigation prop是整个导航环节的关键一员，接下来就详细讲解一下navigation的作用。</p>
+<h3 id="navigation包含以下功能："><a href="#navigation包含以下功能：" class="headerlink" title="navigation包含以下功能："></a>navigation包含以下功能：</h3><pre><code>- navigate：跳转到其他界面；
+- state：屏幕的当前state；
+- setParams：改变路由的params；
+- goBack：关闭当前屏幕；
+- dispatch：向路由发送一个action；
+- addListener：订阅导航生命周期的更新；
+- isFocused：true 标识屏幕获取了焦点；
+- getParam：获取具有回退的特定参数；
+- dangerouslyGetParent：返回父导航器；
+</code></pre><p>注意：一个navigation有可能没有navigate、setParams以及goBack，只有state与dispatch，所以在使用navigate时要进行判断，如果没有navigate可以使用navigation去dispatch一个新的action。如：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;navigation,theme,selectedTab&#125;=<span class="keyword">this</span>.props;</span><br><span class="line"><span class="keyword">const</span> resetAction = StackActions.reset(&#123;</span><br><span class="line">    index: <span class="number">0</span>,</span><br><span class="line">    actions: [</span><br><span class="line">        NavigationActions.navigate(&#123;</span><br><span class="line">            routeName: <span class="string">'HomePage'</span>,</span><br><span class="line">            params:&#123;</span><br><span class="line">                theme:theme,</span><br><span class="line">                selectedTab:selectedTab</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;)</span><br><span class="line">navigation.dispatch(resetAction)</span><br></pre></td></tr></table></figure>
+<h3 id="StackNavigator的navigation的额外功能"><a href="#StackNavigator的navigation的额外功能" class="headerlink" title="StackNavigator的navigation的额外功能:"></a>StackNavigator的navigation的额外功能:</h3><p>当且仅当当前 navigator 是 stack navigator 时，<code>this.props.navigation</code>上有一些附加功能。 这些函数是 navigate 和 goBack 的替代方法， 你可以使用任何你喜欢的方法。 这些功能是：</p>
+<ul>
+<li>this.props.navigation<ul>
+<li>push - 导航到堆栈中的一个新的路由</li>
+<li>pop - 返回堆栈中的上一个页面</li>
+<li>popToTop - 跳转到堆栈中最顶层的页面</li>
+<li>replace - 用新路由替换当前路由</li>
+<li>reset - 擦除导航器状态并将其替换为多个操作的结果</li>
+<li>dismiss - 关闭当前栈</li>
+</ul>
+</li>
+</ul>
+<h3 id="使用navigate进行界面之间的跳转"><a href="#使用navigate进行界面之间的跳转" class="headerlink" title="使用navigate进行界面之间的跳转"></a>使用navigate进行界面之间的跳转</h3><ul>
+<li>navigation.navigate({routeName, params, action, key}) 或 navigation.navigate(routeName, params, action)<ul>
+<li>routeName：要跳转到的界面的路由名，也就是在导航其中配置的路由名；</li>
+<li>params：要传递给下一个界面的参数；</li>
+<li>action：如果该界面是一个navigator的话，将运行这个sub-action；</li>
+<li>key：要导航到的路由的可选标识符。 如果已存在，将后退到此路由；</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> AppStackNavigator = createStackNavigator(&#123;</span><br><span class="line">    HomeScreen: &#123;</span><br><span class="line">        screen: HomeScreen</span><br><span class="line">    &#125;,</span><br><span class="line">    Page1: &#123;</span><br><span class="line">        screen: Page1</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HomeScreen</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123;navigate&#125; = <span class="keyword">this</span>.props.navigation;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;View&gt;</span><br><span class="line">        &lt;Text&gt;This is HomeScreen&lt;<span class="regexp">/Text&gt;</span></span><br><span class="line"><span class="regexp">        &lt;Button</span></span><br><span class="line"><span class="regexp">          onPress=&#123;() =&gt; navigate('Page1', &#123;name: 'Devio'&#125;)&#125;</span></span><br><span class="line"><span class="regexp">          title="Go to Page1"</span></span><br><span class="line"><span class="regexp">        /</span>&gt;</span><br><span class="line">      &lt;<span class="regexp">/View&gt;</span></span><br><span class="line"><span class="regexp">     )</span></span><br><span class="line"><span class="regexp">   &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="使用state的params"><a href="#使用state的params" class="headerlink" title="使用state的params"></a>使用state的params</h3><p>可以通过<code>this.props.state.params</code>来获取通过<code>setParams()</code>，或<code>navigation.navigate()</code>传递的参数。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;Button</span><br><span class="line">    title=&#123;params.mode === <span class="string">'edit'</span> ? <span class="string">'保存'</span> : <span class="string">'编辑'</span>&#125;</span><br><span class="line">    onPress=&#123;() =&gt;</span><br><span class="line">        setParams(&#123;<span class="attr">mode</span>: params.mode === <span class="string">'edit'</span> ? <span class="string">''</span> : <span class="string">'edit'</span>&#125;)&#125;</span><br><span class="line">/&gt;</span><br><span class="line">&lt;Button</span><br><span class="line">    title=<span class="string">"Go To Page1"</span></span><br><span class="line">    onPress=&#123;() =&gt; &#123;</span><br><span class="line">        navigation.navigate(<span class="string">'Page1'</span>,&#123; <span class="attr">name</span>: <span class="string">'Devio'</span> &#125;);</span><br><span class="line">    &#125;&#125;</span><br><span class="line">/&gt;</span><br><span class="line"><span class="keyword">const</span> &#123;navigation&#125; = <span class="keyword">this</span>.props;</span><br><span class="line"><span class="keyword">const</span> &#123;state, setParams&#125; = navigation;</span><br><span class="line"><span class="keyword">const</span> &#123;params&#125; = state;</span><br><span class="line"><span class="keyword">const</span> showText = params.mode === <span class="string">'edit'</span> ? <span class="string">'正在编辑'</span> : <span class="string">'编辑完成'</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="使用setParams-改变route-params"><a href="#使用setParams-改变route-params" class="headerlink" title="使用setParams 改变route params"></a>使用setParams 改变route params</h3><p><code>setParams: function setParams(params)</code>： 我们可以借助setParams来改变route params，比如，通过setParams来更新页面顶部的标题，返回按钮等；</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ProfileScreen</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123;setParams&#125; = <span class="keyword">this</span>.props.navigation;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;Button</span><br><span class="line">        onPress=&#123;() =&gt; setParams(&#123;<span class="attr">name</span>: <span class="string">'Lucy'</span>&#125;)&#125;</span><br><span class="line">        title=<span class="string">"Set title name to 'Lucy'"</span></span><br><span class="line">      /&gt;</span><br><span class="line">     )</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>注意navigation.setParams改变的是当前页面的Params，如果要改变其他页面的Params可以通过NavigationActions.setParams完成.</li>
+</ul>
+<h3 id="使用goBack返回到上一页面或指定页面"><a href="#使用goBack返回到上一页面或指定页面" class="headerlink" title="使用goBack返回到上一页面或指定页面"></a>使用goBack返回到上一页面或指定页面</h3><ul>
+<li>goBack: function goBack(key)：我们可以借助goBack返回到上一页或者路由栈的指定页面。<ul>
+<li>其中key表示你要返回到页面的页面标识如id-1517035332238-4，不是routeName。</li>
+<li>可以通过指定页面的navigation.state.key来获得页面的标识。</li>
+<li>key非必传，也可传null。</li>
+<li><code>navigation.state {params: {…}, key: &quot;id-1517035332238-4&quot;, routeName: &quot;Page1&quot;}</code></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Page1</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">const</span> &#123;navigation&#125; = <span class="keyword">this</span>.props;</span><br><span class="line">        <span class="keyword">return</span> &lt;View style=&gt;</span><br><span class="line">            &lt;Text style=&#123;styles.text&#125;&gt;欢迎来到Page1&lt;/Text&gt;</span><br><span class="line">            &lt;Button</span><br><span class="line">                title="Go Back"</span><br><span class="line">                onPress=&#123;() =&gt; &#123;</span><br><span class="line">                    navigation.goBack();</span><br><span class="line">                &#125;&#125;</span><br><span class="line">            /&gt;</span><br><span class="line">        &lt;/View&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="通过dispatch发送一个action"><a href="#通过dispatch发送一个action" class="headerlink" title="通过dispatch发送一个action"></a>通过dispatch发送一个action</h3><ul>
+<li>dispatch: function dispatch(action)：给当前界面设置action，会替换原来的跳转，回退等事件。</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> resetAction = StackActions.reset(&#123;</span><br><span class="line">	index: <span class="number">0</span>,</span><br><span class="line">	actions: [</span><br><span class="line">	    NavigationActions.navigate(&#123;</span><br><span class="line">	        routeName: <span class="string">'HomePage'</span>,</span><br><span class="line">	        params:&#123;</span><br><span class="line">	            theme:theme,</span><br><span class="line">	            selectedTab:selectedTab</span><br><span class="line">	        &#125;,</span><br><span class="line">	    &#125;)</span><br><span class="line">	]</span><br><span class="line">	&#125;)</span><br><span class="line">navigation.dispatch(resetAction)</span><br></pre></td></tr></table></figure>
+<h2 id="NavigationActions"><a href="#NavigationActions" class="headerlink" title="NavigationActions"></a>NavigationActions</h2><ul>
+<li>Navigate : 导航到其他的页面；</li>
+<li>Back : 返回到上一个页面；</li>
+<li>Set Params : 设置指定页面的Params；</li>
+<li>Init : 初始化一个 state 如果 state 是 undefined；</li>
+</ul>
+<h3 id="Navigate："><a href="#Navigate：" class="headerlink" title="Navigate："></a>Navigate：</h3><p>Navigatie action会使用Navigate action的结果来更新当前的state。</p>
+<p>方法原型：navigate({routeName, params, action, key})</p>
+<ul>
+<li>routeName：字符串，必选项，在app的router里注册的导航目的地的routeName。</li>
+<li>params：对象，可选项，融合进目的地route的参数。</li>
+<li>actions：对象，可选项(高级)，如果screen也是一个navigator，次级action可以在子router中运行。在文档中描述的任何actions都可以作为次级action。</li>
+<li>key： string or null 可选，要导航到的路由的标识符。如果已存在, 则导航回此路由。</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; NavigationActions &#125; <span class="keyword">from</span> <span class="string">'react-navigation'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> navigateAction = NavigationActions.navigate(&#123;</span><br><span class="line">  routeName: <span class="string">'Profile'</span>,</span><br><span class="line">  params: &#123;&#125;,</span><br><span class="line">  action: NavigationActions.navigate(&#123; <span class="attr">routeName</span>: <span class="string">'SubProfileRoute'</span>&#125;)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">this</span>.props.navigation.dispatch(navigateAction)</span><br></pre></td></tr></table></figure>
+<h3 id="Back"><a href="#Back" class="headerlink" title="Back"></a>Back</h3><p>返回到前一个screen并且关闭当前screen.backaction creator接受一个可选的参数:</p>
+<p>方法原型：back(key)</p>
+<ul>
+<li>key：String 可选，这个可以和上文中讲到的goBack的key是一个概念；</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; NavigationActions &#125; <span class="keyword">from</span> <span class="string">'react-navigation'</span></span><br><span class="line"><span class="keyword">const</span> backAction = NavigationActions.back();</span><br><span class="line"><span class="keyword">this</span>.props.navigation.dispatch(backAction);</span><br></pre></td></tr></table></figure>
+<h3 id="SetParams"><a href="#SetParams" class="headerlink" title="SetParams"></a>SetParams</h3><p>通过SetParams我们可以修改指定页面的Params。</p>
+<ul>
+<li>params：对象，必选参数，将会被合并到已经存在页面的Params中。</li>
+<li>key：字符串，必选参数，页面的key。</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; NavigationActions &#125; <span class="keyword">from</span> <span class="string">'react-navigation'</span></span><br><span class="line"><span class="keyword">const</span> setParamsAction = NavigationActions.setParams(&#123;</span><br><span class="line">    params: &#123; <span class="attr">title</span>: <span class="string">'HomePage'</span> &#125;,</span><br><span class="line">    key: <span class="string">'id-1517035332238-4'</span>,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>navigation中有setParams为什么还要有NavigationActions.setParams?</p>
+<ul>
+<li>在上文中讲到过navigation中有可能只有state与dispatch，这个时候如果要修改页面的Params，则只能通过NavigationActions.setParams了；</li>
+<li>另外，navigation.setParams只能修改当前页面的Params，而NavigationActions.setParams可以修改所有页面的Params；</li>
+</ul>
+<h2 id="StackActions"><a href="#StackActions" class="headerlink" title="StackActions"></a>StackActions</h2><ul>
+<li>Reset ： 重置当前 state 到一个新的state；</li>
+<li>Replace ： 使用另一个路由替换指定的路由；</li>
+<li>Push ： 在堆栈顶部添加一个页面，然后跳转到该页面；</li>
+<li>Pop ： 跳转到上一个页面；</li>
+<li>PopToTop ： 跳转到堆栈最顶层的页面，并销毁其他所有页面；</li>
+</ul>
+<h3 id="Reset："><a href="#Reset：" class="headerlink" title="Reset："></a>Reset：</h3><p>Reset action删掉所有的navigation state并且使用这个actions的结果来代替。</p>
+<ul>
+<li>index，数组，必选，navigation state中route数组中激活route的index。</li>
+<li>actions，数组，必选项，Navigation Actions数组，将会替代navigation state。</li>
+<li>key：string or null 可选， 如果设置，具有给定 key 的导航器将重置。 如果为null，则根导航器将重置。</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; NavigationActions, StackActions &#125; <span class="keyword">from</span> <span class="string">'react-navigation'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> resetAction = StackActions.reset(&#123;</span><br><span class="line">  index: <span class="number">0</span>,</span><br><span class="line">  actions: [</span><br><span class="line">    NavigationActions.navigate(&#123; <span class="attr">routeName</span>: <span class="string">'Profile'</span>&#125;)</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">this</span>.props.navigation.dispatch(resetAction)</span><br></pre></td></tr></table></figure>
+<p>使用场景比如进入APP首页后的splash页不在使用，这时可以使用NavigationActions.reset重置它。</p>
+<p>index参数被用来定制化当前激活的route。举个例子：使用两个routes WelcomePage和HomePage给一个基础的stack navigation设置。为了重置route到HomePage，但是在堆栈中又存放在WelcomePage之上，你可以这么做:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; NavigationActions, StackActions &#125; <span class="keyword">from</span> <span class="string">'react-navigation'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> resetAction = StackActions.reset(&#123;</span><br><span class="line">    index: <span class="number">1</span>,</span><br><span class="line">    actions: [</span><br><span class="line">        NavigationActions.navigate(&#123; <span class="attr">routeName</span>: <span class="string">'WelcomePage'</span>&#125;),</span><br><span class="line">        NavigationActions.navigate(&#123; <span class="attr">routeName</span>: <span class="string">'HomePage'</span>&#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">this</span>.props.navigation.dispatch(resetAction);</span><br></pre></td></tr></table></figure>
+<h3 id="replace"><a href="#replace" class="headerlink" title="replace"></a>replace</h3><p>Replace - 用另一个路由替换指定的路由</p>
+<ul>
+<li>key - string - 被替换的路由的 key，如果未指定，最近的路由将会被替换</li>
+<li>newKey - string - 用于替换路线的 Key。 如果未提供，则自动生成。</li>
+<li>routeName - string - routeName用于替换路由。</li>
+<li>params - object - 要传入替换路由的参数。</li>
+<li>action - object - 可选的子动作。</li>
+<li>immediate* - boolean - 目前没有效果, 这是 stack navigator 支持动画替换（它目前不支持）的占位符。</li>
+</ul>
+<h3 id="push"><a href="#push" class="headerlink" title="push"></a>push</h3><p>Push - 在堆栈顶部添加一条路由，并导航至该路由. 与navigate的区别在于，如果有已经加载的页面，navigate方法将跳转到已经加载的页面，而不会重新创建一个新的页面。 push 总是会创建一个新的页面，所以一个页面可以被多次创建</p>
+<ul>
+<li>routeName - string - routeName用于替换路由。</li>
+<li>params - object - 将合并到目标路由的参数（通过this.props.navigation.state.params在目标路由获取）。</li>
+<li>action - Object - 可选 - （高级）如果页面是 navigator，则是在子路由器中运行的子操作。</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; StackActions &#125; <span class="keyword">from</span> <span class="string">'react-navigation'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> pushAction = StackActions.push(&#123;</span><br><span class="line">  routeName: <span class="string">'Profile'</span>,</span><br><span class="line">  params: &#123;</span><br><span class="line">    myUserId: <span class="number">9</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.props.navigation.dispatch(pushAction);</span><br></pre></td></tr></table></figure>
+<h3 id="Pop"><a href="#Pop" class="headerlink" title="Pop"></a>Pop</h3><p>The pop 一个可以返回到堆栈中上一个路由到方法，通过设置参数 n，可以指定返回的多少层。</p>
+<ul>
+<li>n - number - 返回的层数</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; StackActions &#125; <span class="keyword">from</span> <span class="string">'react-navigation'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> popAction = StackActions.pop(&#123;</span><br><span class="line">  n: <span class="number">1</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.props.navigation.dispatch(popAction);</span><br></pre></td></tr></table></figure>
+<h3 id="popToTop"><a href="#popToTop" class="headerlink" title="popToTop"></a>popToTop</h3><p>popToTop 一个可以直接跳转到堆栈最顶层，并销毁其它所有页面的方法，它在功能上与StackActions.pop({n：currentIndex})相同。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; StackActions &#125; <span class="keyword">from</span> <span class="string">'react-navigation'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.props.navigation.dispatch(StackActions.popToTop());</span><br></pre></td></tr></table></figure>
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+        <li>
+            <a target="_blank" href="https://github.com/christopherxxshi">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank" href="https://www.linkedin.com/in/uschrisshi">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-linkedin"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/blog/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/blog/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://chrisshiblog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+
+
+</html>
