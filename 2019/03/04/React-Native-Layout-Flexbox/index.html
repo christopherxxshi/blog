@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/blog/img/favicon.ico">
+
+    <title>
+        
+        React Native Layout-Flexbox - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/blog/css/aircloud.css">
+    <link rel="stylesheet" href="/blog/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/blog/img/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>Chris Shi</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/blog/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#React-Native-Layout-Flexbox"><span class="toc-text">React Native Layout - Flexbox</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#宽和高"><span class="toc-text">宽和高</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#React-Native中Flexbox-和-Web-CSS上Flexbox不同之处"><span class="toc-text">React Native中Flexbox 和 Web CSS上Flexbox不同之处</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Flex-in-React-Native"><span class="toc-text">Flex in React Native</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#父视图属性（容器属性）"><span class="toc-text">父视图属性（容器属性）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#主轴和侧轴（横轴和竖轴）"><span class="toc-text">主轴和侧轴（横轴和竖轴）</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#React-Native-Development"><span class="toc-text">React Native Development</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Layout-Flexbox"><span class="toc-text">Layout - Flexbox</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#宽和高-1"><span class="toc-text">宽和高</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#React-Native中Flexbox-和-Web-CSS上Flexbox不同之处-1"><span class="toc-text">React Native中Flexbox 和 Web CSS上Flexbox不同之处</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Flex-in-React-Native-1"><span class="toc-text">Flex in React Native</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#父视图属性（容器属性）-1"><span class="toc-text">父视图属性（容器属性）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#主轴和侧轴（横轴和竖轴）-1"><span class="toc-text">主轴和侧轴（横轴和竖轴）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#flexDirection"><span class="toc-text">flexDirection</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#flexWrap"><span class="toc-text">flexWrap</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#justifyContent"><span class="toc-text">justifyContent</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#alignItems"><span class="toc-text">alignItems</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#子视图属性"><span class="toc-text">子视图属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#alignSelf"><span class="toc-text">alignSelf</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#flex"><span class="toc-text">flex</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他布局"><span class="toc-text">其他布局</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#视图边框"><span class="toc-text">视图边框</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#尺寸"><span class="toc-text">尺寸</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#外边距"><span class="toc-text">外边距</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#内边距"><span class="toc-text">内边距</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#边缘"><span class="toc-text">边缘</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#定位（position）"><span class="toc-text">定位（position）</span></a></li></ol></li></ol></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        React Native Layout-Flexbox
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2019-03-04 22:08:01</span></span>
+        
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/blog/tags/#React Native" title="React Native">React Native</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <h1 id="React-Native-Layout-Flexbox"><a href="#React-Native-Layout-Flexbox" class="headerlink" title="React Native Layout - Flexbox"></a>React Native Layout - Flexbox</h1><h2 id="宽和高"><a href="#宽和高" class="headerlink" title="宽和高"></a>宽和高</h2><ul>
+<li>尺寸无单位</li>
+<li>在Android上，view 被解释为dp, 字体被解释为sp</li>
+<li>在IOS上， 尺寸被解释为pt</li>
+<li>确保在不同dpi显示上的显示相同</li>
+</ul>
+<h2 id="React-Native中Flexbox-和-Web-CSS上Flexbox不同之处"><a href="#React-Native中Flexbox-和-Web-CSS上Flexbox不同之处" class="headerlink" title="React Native中Flexbox 和 Web CSS上Flexbox不同之处"></a>React Native中Flexbox 和 Web CSS上Flexbox不同之处</h2><ul>
+<li>工作方式相同</li>
+<li>flexDirection: React Native中默认为 ‘column’ Web CSS中默认为 ‘row’</li>
+<li>alignItems: React Native中默认为 ‘stretch’ Web CSS中默认为 ‘flex-start’</li>
+<li>flex: Web CSS flex接受多参数， 如： flex: 2 2 10%, 但是React Native中flex只接受一个参数</li>
+<li>RN不支持属性： align-content, flex-basis, order, flex-basis, flex-flow, flex-grow, flex-shrink</li>
+</ul>
+<h2 id="Flex-in-React-Native"><a href="#Flex-in-React-Native" class="headerlink" title="Flex in React Native"></a>Flex in React Native</h2><h3 id="父视图属性（容器属性）"><a href="#父视图属性（容器属性）" class="headerlink" title="父视图属性（容器属性）"></a>父视图属性（容器属性）</h3><ul>
+<li>flexDirection enum(‘row’, ‘column’, ‘row-reverse’, ‘column-reverse’)</li>
+<li>flexWrap enum(‘wrap’, ‘nowrap’)</li>
+<li>justifyContent enum(‘flex-start’, ‘flex-end’, ‘center’, ‘space-between’,’space-around’)</li>
+<li>alignItem enum(‘flex-start’,’flex-end’, ‘center’, ‘stretch’)</li>
+</ul>
+<h4 id="主轴和侧轴（横轴和竖轴）"><a href="#主轴和侧轴（横轴和竖轴）" class="headerlink" title="主轴和侧轴（横轴和竖轴）"></a>主轴和侧轴（横轴和竖轴）</h4><h1 id="React-Native-Development"><a href="#React-Native-Development" class="headerlink" title="React Native Development"></a>React Native Development</h1><h2 id="Layout-Flexbox"><a href="#Layout-Flexbox" class="headerlink" title="Layout - Flexbox"></a>Layout - Flexbox</h2><h3 id="宽和高-1"><a href="#宽和高-1" class="headerlink" title="宽和高"></a>宽和高</h3><ul>
+<li>尺寸无单位</li>
+<li>在Android上，view 被解释为dp, 字体被解释为sp</li>
+<li>在IOS上， 尺寸被解释为pt</li>
+<li>确保在不同dpi显示上的显示相同</li>
+</ul>
+<h3 id="React-Native中Flexbox-和-Web-CSS上Flexbox不同之处-1"><a href="#React-Native中Flexbox-和-Web-CSS上Flexbox不同之处-1" class="headerlink" title="React Native中Flexbox 和 Web CSS上Flexbox不同之处"></a>React Native中Flexbox 和 Web CSS上Flexbox不同之处</h3><ul>
+<li>工作方式相同</li>
+<li>flexDirection: React Native中默认为 ‘column’ Web CSS中默认为 ‘row’</li>
+<li>alignItems: React Native中默认为 ‘stretch’ Web CSS中默认为 ‘flex-start’</li>
+<li>flex: Web CSS flex接受多参数， 如： flex: 2 2 10%, 但是React Native中flex只接受一个参数</li>
+<li>RN不支持属性： align-content, flex-basis, order, flex-basis, flex-flow, flex-grow, flex-shrink</li>
+</ul>
+<h3 id="Flex-in-React-Native-1"><a href="#Flex-in-React-Native-1" class="headerlink" title="Flex in React Native"></a>Flex in React Native</h3><h4 id="父视图属性（容器属性）-1"><a href="#父视图属性（容器属性）-1" class="headerlink" title="父视图属性（容器属性）"></a>父视图属性（容器属性）</h4><ul>
+<li>flexDirection enum(‘row’, ‘column’, ‘row-reverse’, ‘column-reverse’)</li>
+<li>flexWrap enum(‘wrap’, ‘nowrap’)</li>
+<li>justifyContent enum(‘flex-start’, ‘flex-end’, ‘center’, ‘space-between’,’space-around’)</li>
+<li>alignItem enum(‘flex-start’,’flex-end’, ‘center’, ‘stretch’)</li>
+</ul>
+<h4 id="主轴和侧轴（横轴和竖轴）-1"><a href="#主轴和侧轴（横轴和竖轴）-1" class="headerlink" title="主轴和侧轴（横轴和竖轴）"></a>主轴和侧轴（横轴和竖轴）</h4><p> <img src="https://i.imgur.com/SQp4z4m.png" alt="Screen Shot 2019-03-01 at 11.01.44 A"></p>
+<h4 id="flexDirection"><a href="#flexDirection" class="headerlink" title="flexDirection"></a>flexDirection</h4><p>定义了父视图中的子元素延横轴或侧轴方片的排列方式</p>
+<ul>
+<li>row: 从左向右</li>
+<li>row-reverse:从右向左</li>
+<li>column(default): 默认的排列方式，从上向下</li>
+<li>column-reverse:从下向上</li>
+</ul>
+<p><strong>Usage:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;View style=&#123; &#123;<span class="attr">flexDirection</span>:<span class="string">'row-reverse'</span>,<span class="attr">backgroundColor</span>:<span class="string">"darkgray"</span>,<span class="attr">marginTop</span>:<span class="number">20</span>&#125;&#125;&gt;</span><br><span class="line">    &lt;View style=&#123; &#123;<span class="attr">width</span>:<span class="number">40</span>,<span class="attr">height</span>:<span class="number">40</span>,<span class="attr">backgroundColor</span>:<span class="string">"darkcyan"</span>,<span class="attr">margin</span>:<span class="number">5</span>&#125;&#125;&gt;</span><br><span class="line">    &lt;Text style=&#123; &#123;<span class="attr">fontSize</span>:<span class="number">16</span>&#125;&#125;&gt;<span class="number">1</span>&lt;<span class="regexp">/Text&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>View&gt;</span><br><span class="line">  &lt;View style=&#123; &#123;<span class="attr">width</span>:<span class="number">40</span>,<span class="attr">height</span>:<span class="number">40</span>,<span class="attr">backgroundColor</span>:<span class="string">"darkcyan"</span>,<span class="attr">margin</span>:<span class="number">5</span>&#125;&#125;&gt;</span><br><span class="line">    &lt;Text style=&#123; &#123;<span class="attr">fontSize</span>:<span class="number">16</span>&#125;&#125;&gt;<span class="number">2</span>&lt;<span class="regexp">/Text&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>View&gt;</span><br><span class="line">  &lt;View style=&#123; &#123;<span class="attr">width</span>:<span class="number">40</span>,<span class="attr">height</span>:<span class="number">40</span>,<span class="attr">backgroundColor</span>:<span class="string">"darkcyan"</span>,<span class="attr">margin</span>:<span class="number">5</span>&#125;&#125;&gt;</span><br><span class="line">    &lt;Text style=&#123; &#123;<span class="attr">fontSize</span>:<span class="number">16</span>&#125;&#125;&gt;<span class="number">3</span>&lt;<span class="regexp">/Text&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>View&gt;</span><br><span class="line">  &lt;View style=&#123; &#123;<span class="attr">width</span>:<span class="number">40</span>,<span class="attr">height</span>:<span class="number">40</span>,<span class="attr">backgroundColor</span>:<span class="string">"darkcyan"</span>,<span class="attr">margin</span>:<span class="number">5</span>&#125;&#125;&gt;</span><br><span class="line">    &lt;Text style=&#123; &#123;<span class="attr">fontSize</span>:<span class="number">16</span>&#125;&#125;&gt;<span class="number">4</span>&lt;<span class="regexp">/Text&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>View&gt;</span><br><span class="line">  &lt;<span class="regexp">/View&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/crazycodeboy/RNStudyNotes/develop/React%20Native%E5%B8%83%E5%B1%80/React%20Native%E5%B8%83%E5%B1%80%E8%AF%A6%E7%BB%86%E6%8C%87%E5%8D%97/images/flexDirection.jpg" alt=""></p>
+<h4 id="flexWrap"><a href="#flexWrap" class="headerlink" title="flexWrap"></a>flexWrap</h4><p>属性定义了子元素在父视图内是否允许多行排列，默认为nowrap。</p>
+<ul>
+<li>nowrap(default) flex的元素只排列在一行上，可能导致溢出</li>
+<li>wrap flex的元素在一行排列不下时，就进行多行排列。</li>
+</ul>
+<p><strong>Usage:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;View 		 style=&#123; &#123;<span class="attr">flexWrap</span>:<span class="string">'wrap'</span>,<span class="attr">flexDirection</span>:<span class="string">'row'</span>,<span class="attr">backgroundColor</span>:<span class="string">"darkgray"</span>,<span class="attr">marginTop</span>:<span class="number">20</span>&#125;&#125;&gt;</span><br><span class="line">···</span><br><span class="line">&lt;<span class="regexp">/View&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/crazycodeboy/RNStudyNotes/develop/React%20Native%E5%B8%83%E5%B1%80/React%20Native%E5%B8%83%E5%B1%80%E8%AF%A6%E7%BB%86%E6%8C%87%E5%8D%97/images/flexWrap.jpg" alt=""></p>
+<h4 id="justifyContent"><a href="#justifyContent" class="headerlink" title="justifyContent"></a>justifyContent</h4><p>属性定义了浏览器如何分配顺着父容器主轴的弹性（flex）元素之间及其周围的空间，默认为flex-start。</p>
+<ul>
+<li>flex-start(default) 从行首开始排列。每行第一个弹性元素与行首对齐，同时所有后续的弹性元素与前一个对齐。</li>
+<li>flex-end 从行尾开始排列。每行最后一个弹性元素与行尾对齐，其他元素将与后一个对齐。</li>
+<li>center 伸缩元素向每行中点排列。每行第一个元素到行首的距离将与每行最后一个元素到行尾的距离相同。</li>
+<li>space-between 在每行上均匀分配弹性元素。相邻元素间距离相同。每行第一个元素与行首对齐，每行最后一个元素与行尾对齐。</li>
+<li>space-around 在每行上均匀分配弹性元素。相邻元素间距离相同。每行第一个元素到行首的距离和每行最后一个元素到行尾的距离将会是相邻元素之间距离的一半。</li>
+</ul>
+<p><strong>Usage:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;View 		 style=&#123; &#123;<span class="attr">justifyContent</span>:<span class="string">'center'</span>,<span class="attr">flexDirection</span>:<span class="string">'row'</span>,<span class="attr">backgroundColor</span>:<span class="string">"darkgray"</span>,<span class="attr">marginTop</span>:<span class="number">20</span>&#125;&#125;&gt;</span><br><span class="line">···</span><br><span class="line">&lt;<span class="regexp">/View&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/crazycodeboy/RNStudyNotes/develop/React%20Native%E5%B8%83%E5%B1%80/React%20Native%E5%B8%83%E5%B1%80%E8%AF%A6%E7%BB%86%E6%8C%87%E5%8D%97/images/justifyContent.jpg" alt=""></p>
+<h4 id="alignItems"><a href="#alignItems" class="headerlink" title="alignItems"></a>alignItems</h4><p>alignItems属性以与justify-content相同的方式在侧轴方向上将当前行上的弹性元素对齐，默认为stretch。</p>
+<ul>
+<li>flex-start 元素向侧轴起点对齐</li>
+<li>flex-end 元素向侧轴终点对齐</li>
+<li>center 元素在侧轴居中。如果元素在侧轴上的高度高于其容器，那么在两个方向上溢出距离相同。</li>
+<li>stretch 弹性元素被在侧轴方向被拉伸到与容器相同的高度或宽度。</li>
+</ul>
+<p><strong>Usage:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;View 		 style=&#123; &#123;<span class="attr">justifyContent</span>:<span class="string">'center'</span>,<span class="attr">flexDirection</span>:<span class="string">'row'</span>,<span class="attr">backgroundColor</span>:<span class="string">"darkgray"</span>,<span class="attr">marginTop</span>:<span class="number">20</span>&#125;&#125;&gt;</span><br><span class="line">···</span><br><span class="line">&lt;<span class="regexp">/View&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/crazycodeboy/RNStudyNotes/develop/React%20Native%E5%B8%83%E5%B1%80/React%20Native%E5%B8%83%E5%B1%80%E8%AF%A6%E7%BB%86%E6%8C%87%E5%8D%97/images/alignItems.jpg" alt=""></p>
+<h3 id="子视图属性"><a href="#子视图属性" class="headerlink" title="子视图属性"></a>子视图属性</h3><ul>
+<li>alignSelf enum(‘auto’, ‘flex-start’, ‘flex-end’, ‘center’, ‘stretch’)</li>
+<li>flex number</li>
+</ul>
+<h4 id="alignSelf"><a href="#alignSelf" class="headerlink" title="alignSelf"></a>alignSelf</h4><p>alignSelf属性以属性定义了flex容器内被选中项目的对齐方式。注意：alignSelf 属性可重写灵活容器的 alignItems 属性。</p>
+<ul>
+<li>auto(default) 元素继承了它的父容器的 align-items 属性。如果没有父容器则为 “stretch”。</li>
+<li>stretch    元素被拉伸以适应容器。</li>
+<li>center    元素位于容器的中心。</li>
+<li>flex-start    元素位于容器的开头。</li>
+<li>flex-end    元素位于容器的结尾。</li>
+</ul>
+<h4 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h4><ul>
+<li>flex 属性定义了一个可伸缩元素的能力，默认为0。(争夺空间)</li>
+</ul>
+<p><strong>Usage:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;View style=&#123; &#123;flexDirection:&apos;row&apos;,height:40, backgroundColor:&quot;darkgray&quot;,marginTop:20&#125;&#125;&gt;</span><br><span class="line">  &lt;View style=&#123; &#123;flex:1,backgroundColor:&quot;darkcyan&quot;,margin:5&#125;&#125;&gt;</span><br><span class="line">    &lt;Text style=&#123; &#123;fontSize:16&#125;&#125;&gt;flex:1&lt;/Text&gt;</span><br><span class="line">  &lt;/View&gt;</span><br><span class="line">  &lt;View style=&#123; &#123;flex:2,backgroundColor:&quot;darkcyan&quot;,margin:5&#125;&#125;&gt;</span><br><span class="line">    &lt;Text style=&#123; &#123;fontSize:16&#125;&#125;&gt;flex:2&lt;/Text&gt;</span><br><span class="line">  &lt;/View&gt;</span><br><span class="line">  &lt;View style=&#123; &#123;flex:3,backgroundColor:&quot;darkcyan&quot;,margin:5&#125;&#125;&gt;</span><br><span class="line">    &lt;Text style=&#123; &#123;fontSize:16&#125;&#125;&gt;flex:3&lt;/Text&gt;</span><br><span class="line">  &lt;/View&gt;          </span><br><span class="line">&lt;/View&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/crazycodeboy/RNStudyNotes/develop/React%20Native%E5%B8%83%E5%B1%80/React%20Native%E5%B8%83%E5%B1%80%E8%AF%A6%E7%BB%86%E6%8C%87%E5%8D%97/images/flex.jpg" alt=""></p>
+<h3 id="其他布局"><a href="#其他布局" class="headerlink" title="其他布局"></a>其他布局</h3><h4 id="视图边框"><a href="#视图边框" class="headerlink" title="视图边框"></a>视图边框</h4><ul>
+<li>borderBottomWidth number 底部边框宽度</li>
+<li>borderLeftWidth number 左边框宽度</li>
+<li>borderRightWidth number 右边框宽度</li>
+<li>borderTopWidth number 顶部边框宽度</li>
+<li>borderWidth number 边框宽度</li>
+<li>borderColor 边框颜色</li>
+</ul>
+<h4 id="尺寸"><a href="#尺寸" class="headerlink" title="尺寸"></a>尺寸</h4><ul>
+<li>width number</li>
+<li>height number</li>
+</ul>
+<h4 id="外边距"><a href="#外边距" class="headerlink" title="外边距"></a>外边距</h4><ul>
+<li>margin number 外边距</li>
+<li>marginBottom number 下外边距</li>
+<li>marginHorizontal number 左右外边距</li>
+<li>marginLeft number 左外边距</li>
+<li>marginRight number 右外边距</li>
+<li>marginTop number 上外边距</li>
+<li>marginVertical number 上下外边距</li>
+</ul>
+<h4 id="内边距"><a href="#内边距" class="headerlink" title="内边距"></a>内边距</h4><ul>
+<li>padding number 内边距</li>
+<li>paddingBottom number 下内边距</li>
+<li>paddingHorizontal number 左右内边距</li>
+<li>paddingLeft number 做内边距</li>
+<li>paddingRight number 右内边距</li>
+<li>paddingTop number 上内边距</li>
+<li>paddingVertical number 上下内边距</li>
+</ul>
+<h4 id="边缘"><a href="#边缘" class="headerlink" title="边缘"></a>边缘</h4><ul>
+<li>left number 属性规定元素的左边缘。该属性定义了定位元素左外边距边界与其包含块左边界之间的偏移。</li>
+<li>right number 属性规定元素的右边缘。该属性定义了定位元素右外边距边界与其包含块右边界之间的偏移</li>
+<li>top number 属性规定元素的顶部边缘。该属性定义了一个定位元素的上外边距边界与其包含块上边界之间的偏移。</li>
+<li>bottom number 属性规定元素的底部边缘。该属性定义了一个定位元素的下外边距边界与其包含块下边界之间的偏移。</li>
+</ul>
+<h4 id="定位（position）"><a href="#定位（position）" class="headerlink" title="定位（position）"></a>定位（position）</h4><ul>
+<li>position enum(‘absolute’, ‘relative’)属性设置元素的定位方式，为将要定位的元素定义定位规则。</li>
+<li>absolute：生成绝对定位的元素，元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。</li>
+<li>relative：生成相对定位的元素，相对于其正常位置进行定位。因此，”left:20” 会向元素的 LEFT 位置添加 20 像素。</li>
+</ul>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+        <li>
+            <a target="_blank" href="https://github.com/christopherxxshi">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank" href="https://www.linkedin.com/in/uschrisshi">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-linkedin"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/blog/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/blog/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://chrisshiblog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+
+
+</html>
